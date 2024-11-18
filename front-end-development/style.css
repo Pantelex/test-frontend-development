@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Utility clacss*/
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: red;
+  padding: 15px 20px;
+  display: grid;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header h1 {
+  font-weight: 700;
+  order: 2;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+header .menu ul li {
+  padding: 15px 20px;
+}
+
+.hamburger-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background: blue;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  font-size: 21px;
+}
+
+.hamburger-menu .menu-button {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.hamburger-menu .menu-button > div {
+  width: 40px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 991.8px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991.8px) {
+  header .menu {
+    display: none;
+  }
+  .container {
+    margin: 0;
+  }
+}
